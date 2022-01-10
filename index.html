@@ -23,8 +23,8 @@
       <div class="col-md-8 offset-2">
         <div class="row mb-5 animate__animated animate__pulse">
           <div class="col">
-            <label for="inputPassword2" class="visually-hidden">Search</label>
-            <input type="text" class="form-control" id="inputSearch" placeholder="Search...">
+            <label for="inputPassword2"  class="visually-hidden">Search</label>
+            <input type="text" onchange="mySearch(this.value)" class="form-control" id="inputSearch" placeholder="Search...">
           </div>
           <div class="col">
             <button type="submit" class="btn btn-primary mb-3">buscar</button>
@@ -95,7 +95,7 @@
 </body>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-xl" onMouseOver="myStyle('exampleModal','#eb4034','#eb4034',true)" onMouseOut="myStyle('exampleModal',false,'#6c757d',true)">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
@@ -151,7 +151,7 @@
                 <div class="row mt-3">
                   <div class="col-6 text-center border-end border-dark">
                     <h5 class="text-success"> <i class="bi bi-hand-thumbs-up-fill"></i> Likes </h5>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush fw-bold">
                       <li class="list-group-item">An item</li>
                       <li class="list-group-item">A second item</li>
                       <li class="list-group-item">A third item</li>
@@ -161,7 +161,7 @@
                   </div>
                   <div class="col-6 text-center">
                     <h5 class="text-danger" ><i class="bi bi-hand-thumbs-down-fill text-danger"></i> Dislikes</h5>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush fw-bold">
                       <li class="list-group-item">Preconceito</li>
                       <li class="list-group-item">Homofobia</li>
                       <li class="list-group-item">A third item</li>
@@ -177,7 +177,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" id="close" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
